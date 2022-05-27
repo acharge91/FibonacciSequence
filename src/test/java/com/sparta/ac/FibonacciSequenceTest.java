@@ -56,4 +56,9 @@ public class FibonacciSequenceTest {
         ArrayList<Integer> testOne = new ArrayList<>(Arrays.asList(0, 1, 1, 2, 3, 5, 8, 13, 21, 34));
         Assertions.assertArrayEquals(testOne.toArray(), FibonacciSequence.getFibonacciSequence(10).toArray());
     }
+    @Test
+    @DisplayName("return first 0 for negative position")
+    void return0ForNegativePosition(){
+        Assertions.assertEquals(0, FibonacciSequence.getFibonacciNumberAtIndex(-3));
+    }
 }
